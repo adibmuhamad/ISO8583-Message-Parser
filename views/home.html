@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="/public/iso8583.js"></script>
+    <script type="text/javascript" src="/public/general.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/style.css">
+
+</head>
+<body>
+        <nav>
+                <div class="nav-wrapper">
+                  <a href="http://localhost:8000/" class="brand-logo" style="margin-left: 40px">Go</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 40px;">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+              </nav>
+    <div class="container" style="margin-top: 50px;">
+        <form action="" method="get" enctype="multipart/form-data">
+            <div>
+                <textarea id="input" placeholder="Type ISO 8583 message here...">0200B23A800128A1801800000000140000006500000000000020500428132710000578132710042804280428034561745917000123400001100000230579A1B2C3D4E5      SOLABTEST             TEST-3       DF MX010abcdefghij4847B456PRO013        1234P0399904ABCD</textarea>
+            </div>
+            <div>
+                <input class="waves-effect waves-light btn" type="button" id="calc" value="Parse Message">
+            </div>
+        </form>
+    </div>
+
+        <div id="properties"></div>
+        <div id="data" style="margin-bottom: 50px"></div>
+    </div>
+    
+</body>
+</html>
